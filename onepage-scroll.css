@@ -1,17 +1,21 @@
-body, html {
-  margin: 0;
-  overflow: hidden;
+.enable-page-scroller body,
+.enable-page-scroller {
   -webkit-transition: opacity 400ms;
   -moz-transition: opacity 400ms;
   transition: opacity 400ms;
 }
 
-body, .onepage-wrapper, html {
+.enable-page-scroller body,
+.enable-page-scroller,
+.onepage-wrapper {
   display: block;
   position: static;
   padding: 0;
   width: 100%;
   height: 100%;
+}
+.enable-page-scroller body {
+  overflow: hidden;
 }
 
 .onepage-wrapper {
@@ -46,7 +50,7 @@ body, .onepage-wrapper, html {
   width: 4px;
   height: 4px;
   display: block;
-  
+
 }
 .onepage-pagination li a:before{
   content: '';
@@ -92,4 +96,8 @@ body, .onepage-wrapper, html {
 
 body.disabled-onepage-scroll, .disabled-onepage-scroll .onepage-wrapper, html {
   position: inherit;
+}
+
+.disabled-onepage-scroll {
+  overflow: auto;
 }
